@@ -13,7 +13,7 @@ const fitness = function (network) {
       Methods.Cost.MSE(expected, network.activate(input).map(Math.abs))
     )
     var allMatch = tests.filter(x => x !== tests[0]).length
-    if (complexity > 10) return Number.MAX_SAFE_INTEGER
+    if (complexity > 15) return Number.MAX_SAFE_INTEGER
     if (allMatch) return Number.MAX_SAFE_INTEGER
     return tests[0]
   }).reduce((a, b) => a + b) || -100000
